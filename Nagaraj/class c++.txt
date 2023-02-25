@@ -1,0 +1,49 @@
+#include<iostream>
+using namespace std;
+
+class A
+{
+	int x;
+	float y;
+public:
+	void assign (int a,int b)
+	{
+		x=a;
+		y=b;
+	    cout<<"fun1"<<endl;
+	}
+	void assign(int a,float b)
+	{
+		cout<<"fun2"<<endl;
+		x=a;
+		y=b;
+	}
+	void assign(float a,int b)
+	{
+		cout<<"fun3"<<endl;
+		x=a;
+		y=b;
+	}
+	void assign (float a,float b)
+	{
+		cout<<"fun4"<<endl;
+		x=a;
+		y=b;
+	}
+	void display()
+	{
+		cout<<x<<" "<<y<<endl;
+	}
+};
+int main()
+{
+	A obj;
+	obj.assign(15,30);
+	obj.display();
+	obj.assign(17,20.5f);
+	obj.display();
+	obj.assign(19.2f,20);
+	obj.display();
+	obj.assign(11.6f,20.8f);
+	obj.display();
+}
