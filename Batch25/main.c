@@ -1,6 +1,7 @@
 #include<stdio.h>
 #include<iostream>
 using namespace std;
+void fun();
 class A
 {
 public:
@@ -50,6 +51,10 @@ A operator++(A obj)
 	//cout << obj.a << " " << obj.b << endl;
 	return obj;
 }
+void fun()
+{
+	cout<<"hello I am india"<<endl;
+}
 int main()
 {
 	A obj1(12, 23);
@@ -58,6 +63,8 @@ int main()
 	//A obj3 = obj++;
 	++obj;
 	cout << obj << endl;
+
+	fun();
 	//obj++;
 	//cout << obj3 << endl;
 	//cout << obj << endl;
