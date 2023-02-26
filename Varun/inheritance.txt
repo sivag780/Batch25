@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+class A
+{
+public:
+	int x;
+	int y;
+void assign();
+void display();
+};
+void A::assign()
+{
+x=10;
+y=20;
+}
+void A::display()
+{
+	cout<<x<<" "<<y<<endl;
+}
+int main()
+{
+	A obj1;
+	obj1.assign();
+	obj1.display();
+}
+
+	
