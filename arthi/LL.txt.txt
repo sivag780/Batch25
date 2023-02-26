@@ -1,0 +1,188 @@
+#include<stdio.h>
+#include<stdlib.h>
+void insert_front(int);
+void insert_rear(int);
+void display();
+int delete_front();
+int delete_rear();
+void insert_mid(int,int);
+int  delete_mid(int);
+
+//int delete_rear();
+
+int option;
+struct node
+{
+	int data;
+	struct node* link;
+};
+struct node* head = NULL;
+int main()
+{
+	enum LL{INSERT_F=1,DISP, DEL_F,INSERT_R,DEL_R,INSERT_MID,DEL_MID};
+	while(1)
+	{
+		printf("Enter the option: 1-INSERT_F,2-DISP,3-DEL_F,4-INSERT_R,5-DEL_R,6-INSERT_MID");
+		scanf_s("%d", &option);
+		switch (option)
+	{
+		case INSERT_F:
+		{
+			int item;
+			printf("Enter the item");
+			scanf_s("%d", &item);
+			insert_front(item);
+		}
+		break;
+		case DISP:
+		{
+			printf("\n");
+			display();
+		}
+		case  DEL_F:
+		{
+			int del;
+			del=delete_front();
+			printf("The deleted item is %d", del);
+		}
+		break;
+		case INSERT_R:
+		{
+			int item;
+			printf("Enter the item");
+			scanf_s("%d", &item);
+			insert_rear(item);
+
+		}
+		break;
+		case DEL_R:
+		{
+			int del;
+			del = delete_rear();
+			printf("The deleted item is %d", del);
+		}
+		break;
+		case INSERT_MID:
+		{
+			int item;
+			int pos;
+			printf("Enter the item");
+			scanf_s("%d", &item);
+			printf("Enter the pos");
+			scanf_s("%d", &pos);
+			insert_mid(item,pos);
+		}
+		case DEL_MID:
+		{
+			int del;
+			int pos;
+			printf("Enter the pos");
+			scanf_s("%d", &pos);
+			del = delete_mid(pos);
+			printf("The deleted item is %d", del);
+		}
+	}
+	}
+}
+void insert_front(int itm)
+{
+	struct node* temp = (struct node *)malloc(sizeof(struct node));
+	if (temp != NULL);
+	{
+		temp->data = itm;
+		temp->link = head;
+		head = temp;
+	}
+}
+void display()
+{
+	struct node* ptr = head;
+	while (ptr != NULL)
+	{
+		printf("\n%d\n", ptr->data);
+		ptr = ptr->link;
+	}
+}
+int delete_front()
+{
+	int del;
+	struct node* ptr = head;
+	if (ptr != NULL)
+	{
+		del = ptr->data;
+		head = ptr->link;
+		free(ptr);
+		ptr = NULL;
+	}
+	return del;
+}
+void insert_rear(int item)
+{
+	struct node* temp =(struct node *)malloc(sizeof(struct node));
+	if (temp != NULL)
+	{
+		temp->data = item;
+		temp->link = NULL;
+	}
+	struct node* ptr = head;
+	while(ptr->link!= NULL)
+	{
+		ptr = ptr->link;
+	}
+	ptr->link = temp;
+}
+int delete_rear()
+{
+	int del;
+	struct node* ptr = head;
+	struct node* prev = NULL;
+	while (ptr->link != NULL )
+	{
+		prev = ptr;
+		ptr = ptr->link;
+	}
+	del = ptr->data;
+	prev->link = ptr->link;
+	free(ptr);
+	ptr = NULL;
+	return del;
+}
+void insert_mid(item, pos)
+{
+	int count = 1;
+	struct node* temp = (struct node *)malloc(sizeof(struct node));
+	if (temp != NULL)
+	{
+		temp->data = item;
+		temp->link = NULL;
+	}
+	struct node* ptr = head;
+	while (count < pos-1)
+	{
+		ptr = ptr->link;
+		count++;
+	}
+	temp->link = ptr->link;
+	ptr->link = temp;
+
+}
+int  delete_mid(int pos)
+{
+	int del;
+	int count = 1;
+	struct node* ptr = head;
+	struct node* prev = NULL;
+	while (count < pos)
+	{   
+		prev = ptr;
+		ptr = ptr->link;
+		count++;
+	}
+	del = ptr->data;
+	prev->link = ptr->link;
+	free(ptr);
+	ptr = NULL;
+	return del;
+
+}
+
