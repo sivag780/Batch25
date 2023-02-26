@@ -33,6 +33,7 @@ int main()
 
     printf("\nOriginal string = %s\n", str);
     printf("Reverse string = %s", reverse);
+    printf("My name is Meganathan");
 
     return 0;
 }
