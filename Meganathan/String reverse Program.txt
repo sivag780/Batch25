@@ -35,5 +35,7 @@ int main()
     printf("Reverse string = %s", reverse);
     printf("My name is Meganathan");
 
+    printf("I Studied in GCE Tirunelveli");
+
     return 0;
 }
