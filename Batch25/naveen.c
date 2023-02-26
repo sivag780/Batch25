@@ -24,11 +24,11 @@ public:
 };
 void operator+(A obj1,A obj)
 {
+
 	obj1.a += obj.a;
 	obj1.b += obj.b;
 	obj1.display();
 	//return obj1;
-
 }
 
 ostream& operator<<(ostream& COUT, A obj)
@@ -64,7 +64,6 @@ int main()
 	++obj;
 	cout << obj << endl;
 
-  
 	fun();
 	//obj++;
 	//cout << obj3 << endl;
@@ -72,10 +71,5 @@ int main()
 	/*obj1 + obj2;
 	obj2 + obj1;
 	cout << obj1 << endl;*/
-  
-  printf("Hello World!\n Welcome to February");
-  printf("hi this is vikram");
-  printf("hi this is purush");
-
 }
 

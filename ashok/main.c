@@ -1,7 +1,6 @@
 #include<stdio.h>
 #include<iostream>
 using namespace std;
-void fun();
 class A
 {
 public:
@@ -24,11 +23,11 @@ public:
 };
 void operator+(A obj1,A obj)
 {
+
 	obj1.a += obj.a;
 	obj1.b += obj.b;
 	obj1.display();
 	//return obj1;
-
 }
 
 ostream& operator<<(ostream& COUT, A obj)
@@ -51,10 +50,6 @@ A operator++(A obj)
 	//cout << obj.a << " " << obj.b << endl;
 	return obj;
 }
-void fun()
-{
-	cout<<"hello I am india"<<endl;
-}
 int main()
 {
 	A obj1(12, 23);
@@ -63,19 +58,11 @@ int main()
 	//A obj3 = obj++;
 	++obj;
 	cout << obj << endl;
-
-  
-	fun();
 	//obj++;
 	//cout << obj3 << endl;
 	//cout << obj << endl;
 	/*obj1 + obj2;
 	obj2 + obj1;
 	cout << obj1 << endl;*/
-  
-  printf("Hello World!\n Welcome to February");
-  printf("hi this is vikram");
-  printf("hi this is purush");
-
 }
 
