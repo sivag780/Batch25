@@ -1,0 +1,10 @@
+#include<stdio.h>
+int main()
+{
+	int j,i=5;
+	for(j=0;j<i;j++
+	{
+		printf("krishna");
+	}
+}
+}
