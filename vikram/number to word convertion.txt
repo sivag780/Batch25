@@ -1,0 +1,299 @@
+#include<stdio.h>
+int main()
+{
+	int num;
+	printf("enter any three digit number ");
+	scanf_s("%d", &num);
+	int a, b, c, d,e;
+	a = num % 10;
+	b = (num / 10) % 10;
+	c = num / 100;
+	d = a + b;
+	e = b * a;
+	//printf("%d  %d  %d", a, b, c);
+	switch (c)
+	{
+	case 1:
+	{
+		printf("one hundred ");
+	}
+	break;
+	case 2:
+	{
+		printf("two hundred ");
+	}break;
+	case 3:
+	{
+		printf("three hunderd ");
+	}
+	break;
+	case 4:
+	{
+		printf("four hundred ");
+	}
+	break;
+	case 5:
+	{
+		printf("five hundred ");
+	}
+	break;
+	case 6:
+	{
+		printf("six hundred");
+	}
+	break;
+	case 8:
+	{
+		printf("eight hundred ");
+	}
+	break;
+	case 7:
+	{
+		printf("seven hundred ");
+	}
+	break;
+	case 9:
+	{
+		printf("Nine hundred");
+	}
+	break;
+	case 0:
+	{
+		printf("zero ");
+	}
+	break;
+	default:
+		break;
+	}
+	if ((b + a) == a)
+	{
+		switch (d)
+		{
+		case 1:
+		{
+			printf(" and one ");
+		}
+		break;
+		case 2:
+		{
+			printf(" and two ");
+		}
+		break;
+		case 3:
+		{
+			printf("and three ");
+		}
+		break;
+		case 4:
+		{
+			printf("and four ");
+		}
+		break;
+		case 5:
+		{
+			printf("and five ");
+		}
+		break;
+		case 6:
+		{
+			printf("and six ");
+		}
+		break;
+		case 8:
+		{
+			printf("and eight ");
+		}
+		break;
+		case 7:
+		{
+			printf("and seven ");
+		}
+		break;
+		case 9:
+		{
+			printf("and nine ");
+		}
+		break;
+		case 0:
+		{
+			printf("and zero ");
+		}
+		break;
+		default:
+			break;
+		}
+
+	}
+	else if(b*a==a)
+	{
+		switch (e)
+		{
+		case 1:
+		{
+			printf("elven ");
+		}
+		break;
+		case 2:
+		{
+			printf("twelve ");
+		}
+		break;
+		case 3:
+		{
+			printf("thirteen");
+		}
+		break;
+		case 4:
+		{
+			printf("fourteen");
+		}
+		break;
+		case 5:
+		{
+			printf("fivfteen");
+		}
+		break;
+		case 6:
+		{
+			printf("sixteen");
+		}
+		break;
+		case 8:
+		{
+			printf("eighteen ");
+		}
+		break;
+		case 7:
+		{
+			printf("seventeen ");
+		}
+		break;
+		case 9:
+		{
+			printf("Ninteen ");
+		}
+		break;
+		case 0:
+		{
+			printf("ten ");
+		}
+		break;
+		default:
+			break;
+		}
+	}
+	else
+	{
+		switch (b)
+		{
+		case 1:
+		{
+			printf("onety ");
+		}
+		break;
+		case 2:
+		{
+			printf("twenty ");
+		}
+		break;
+		case 3:
+		{
+			printf("thirty ");
+		}
+		break;
+		case 4:
+		{
+			printf("fourty");
+		}
+		break;
+		case 5:
+		{
+			printf("fifty ");
+		}
+		break;
+		case 6:
+		{
+			printf("sixty ");
+		}
+		break;
+		case 8:
+		{
+			printf("eighty ");
+		}
+		break;
+		case 7:
+		{
+			printf("seventy ");
+		}
+		break;
+		case 9:
+		{
+			printf("Niney ");
+		}
+		break;
+		case 0:
+		{
+			printf("not ");
+		}
+		break;
+		default:
+			break;
+		}
+
+
+		switch (a)
+		{
+		case 1:
+		{
+			printf("one ");
+		}
+		break;
+		case 2:
+		{
+			printf("two ");
+		}
+		case 3:
+		{
+			printf("three ");
+		}
+		break;
+		case 4:
+		{
+			printf("four ");
+		}
+		break;
+		case 5:
+		{
+			printf("five ");
+		}
+		break;
+		case 6:
+		{
+			printf("six ");
+		}
+		break;
+		case 8:
+		{
+			printf("eight ");
+		}
+		break;
+		case 7:
+		{
+			printf("seven ");
+		}
+		break;
+		case 9:
+		{
+			printf("Nine ");
+		}
+		break;
+		case 0:
+		{
+			printf("zero ");
+		}
+		break;
+		default:
+			break;
+		}
+	}
+}
