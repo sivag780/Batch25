@@ -23,9 +23,7 @@ int main()
 		{
 			temp=str[top];
 			top--;
-			if((temp=='(' && exp[i]==')') || 
-				(temp=='[' && exp[i]==']') ||
-				(temp=='{' && exp[i]=='}'))
+			if((temp=='(' && exp[i]==')') || (temp=='[' && exp[i]==']') || (temp=='{' && exp[i]=='}'))
 			{
 				continue;
 			}
