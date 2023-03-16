@@ -1,42 +1,41 @@
+/**
+ * C program to count total number of vowel or consonant in a string
+ */
+
 #include <stdio.h>
+#include <string.h>
 #define MAX_SIZE 100 // Maximum string size
 
 int main()
 {
-    char str[MAX_SIZE], reverse[MAX_SIZE];
-    int i, strIndex, revIndex, len;
+    char str[MAX_SIZE];
+    int i, len, vowel, consonant;
 
     /* Input string from user */
     printf("Enter any string: ");
     gets(str);
 
-    /* Find length of string */
-    i = 0;
-    while(str[i] != '\0') i++;
+    vowel = 0;
+    consonant = 0;
+    len = strlen(str);
 
-    len = i;
-
-    /* 
-     * Store each character from end of original string 
-     * to reverse string
-     */
-    revIndex = 0;
-    strIndex = len - 1;
-    while(strIndex >= 0)
+    for(i=0; i<len; i++)
     {
-        reverse[revIndex] = str[strIndex];
-
-        strIndex--;
-        revIndex++;
+        if((str[i]>='a' && str[i]<='z') || (str[i]>='A' && str[i]<='Z'))
+        {
+            /*
+             * If the current character(str[i]) is a vowel
+             */
+            if(str[i] =='a' || str[i]=='e' || str[i]=='i' || str[i]=='o' || str[i]=='u' || 
+               str[i] =='A' || str[i]=='E' || str[i]=='I' || str[i]=='O' || str[i]=='U'  )
+                vowel++;
+            else
+                consonant++;
+        }
     }
-    reverse[revIndex] = '\0';
 
-    printf("\nOriginal string = %s\n", str);
-    printf("Reverse string = %s", reverse);
-    printf("My name is Meganathan");
-
-    printf("I Studied in GCE Tirunelveli");
-printf("Previosly i was worked in Tirunelveli");
+    printf("Total number of vowel = %d\n", vowel);
+    printf("Total number of consonant = %d\n", consonant);
 
     return 0;
 }
